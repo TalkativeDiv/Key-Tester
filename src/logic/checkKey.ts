@@ -115,8 +115,9 @@ let checkType = (key: any) => {
     else if (key == keys[1][j]) return "it is a ctrl key.";
     else if (key == keys[2][j]) return "it is a special character.";
     else if (key == keys[3][j]) return "it is a number.";
-    else if (key == keys[4]) return "it is a space.";
+    return "it is a space.";
   }
+  return length;
 };
 
 export default checkType;
