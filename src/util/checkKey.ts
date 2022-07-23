@@ -11,7 +11,7 @@ let checkType = (key: any) => {
   if (isInteger(parseFloat(key))) return "integer";
   if (specialChars.split("").some((specialChar) => key.includes(specialChar)))
     return "special";
-  if(key.toString().toLowerCase().contains("arrow"))  return "arrow key";
+  if(key.toString().contains("Arrow"))  return "arrow key";
   else if (isString(key.toString())) return "string";
   return;
 };
