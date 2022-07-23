@@ -7,11 +7,12 @@ const specialChars = "[`!@#$%^&*()_+-=[]{};':\"\\|,.<>/?~]/";
  * @param {any} key - The key we want to check
  */
 let checkType = (key: any) => {
+  console.log(typeof key)
   if (key == null) return "not a key";
   if (isInteger(parseFloat(key))) return "integer";
   if (specialChars.split("").some((specialChar) => key.includes(specialChar)))
     return "special";
-  if(key.toString().contains("Arrow"))  return "arrow key";
+  if (key.includes("Arrow")) return "arrow key";
   else if (isString(key.toString())) return "string";
   return;
 };
